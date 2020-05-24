@@ -1,0 +1,128 @@
+#:import colors kivymd.color_definitions.colors
+#:import gch kivy.utils.get_color_from_hex
+#:import environ os.environ
+#:include view/tabs.kv
+#:include view/labels.kv
+
+<RegisterScreen@FloatLayout>
+    name: "register screen"
+
+    MDBoxLayout:
+        orientation: "vertical"
+        size_hint: 0.65, 1
+        pos_hint: {"center_x": .5, "center_y": .6}
+
+        Image:
+            source:
+                f"{environ['APP_ROOT']}/assets/facebook-round.png"
+            pos_hint: {"center_x": .5}
+
+        MDTabs:
+            id: android_tabs
+            tab_indicator_anim: True
+            background_color: app.theme_cls.primary_color
+
+            KitchenSinkTabItem:
+                id: tabitem_login
+                text: "Login"
+
+                MDBoxLayout:
+                    orientation: "vertical"
+                    spacing: "10dp"
+                    pos_hint: {'center_x': .5}
+
+                    Widget:
+                        size_hint: None, 0.05
+
+                    MDTextField:
+                        hint_text: "Username"
+
+                    MDTextField:
+                        hint_text: "Password"
+
+                    MDBoxLayout:
+                        spacing: "10dp"
+                        pos_hint: {'center_x': .5}
+
+                        Widget:
+                            size_hint: 0.6, None
+
+
+                        MDFillRoundFlatButton:
+                            id: btn_login
+                            text: "Login"
+                            on_release: app.init_home_screen()
+
+                        MDFlatButton:
+                            id: btn_exit
+                            text: "Exit"
+
+                        Widget:
+                            size_hint: 0.1, None
+
+                    MDSeparator:
+                        size_hint: 1, None
+                        height: "3dp"
+                        pos_hint: {'center_x': .5}
+
+                    MDLabel:
+                        id: "register"
+                        text: "Register pls"
+                        font_style: 'Body1'
+                        theme_text_color: 'Primary'
+                        halign: 'center'
+
+            KitchenSinkTabItem:
+                id: tabitem_register
+                text: "Register"
+
+                MDBoxLayout:
+                    orientation: "vertical"
+                    spacing: "10dp"
+                    pos_hint: {'center_x': .5}
+
+                    Widget:
+                        size_hint: None, 0.03
+
+                    MDTextField:
+                        hint_text: "Username"
+
+                    MDTextField:
+                        hint_text: "Password"
+
+                    MDTextField:
+                        hint_text: "Password"
+
+                    MDBoxLayout:
+                        spacing: "10dp"
+                        pos_hint: {'center_x': .5, 'right': 1}
+
+                        Widget:
+                            size_hint: 0.6, None
+
+                        MDFillRoundFlatButton:
+                            id: btn_register
+                            text: "Login"
+
+                        MDFlatButton:
+                            id: btn_exit
+                            text: "Exit"
+
+                        Widget:
+                            size_hint: 0.1, None
+
+                    MDSeparator:
+                        size_hint: 1, None
+                        height: "3dp"
+                        pos_hint: {'center_x': .5}
+
+                    MDLabel:
+                        id: "register"
+                        text: "Register pls"
+                        font_style: 'Body1'
+                        theme_text_color: 'Primary'
+                        halign: 'center'
+
+
+
+

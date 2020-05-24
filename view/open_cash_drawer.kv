@@ -1,0 +1,96 @@
+#:include view/tabs.kv
+
+<OpenCashDrawer>
+    name: 'open cash drawer'
+
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        Toolbar:
+            id: toolbar
+
+        MDBoxLayout:
+            size_hint: 1, 1
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.3, 1
+                spacing: "40dp"
+
+                MDCard:
+                    orientation: "vertical"
+                    padding: "8dp"
+                    size_hint: 1, 0.5
+
+                    MDLabel:
+                        text: "Title"
+                        theme_text_color: "Secondary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+
+                    MDSeparator:
+                        height: "1dp"
+
+                    MDLabel:
+                        text: "Body"
+                MDCard:
+                    orientation: "vertical"
+                    padding: "8dp"
+                    size_hint: 1, 0.5
+
+                    MDLabel:
+                        text: "Title"
+                        theme_text_color: "Secondary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+
+                    MDSeparator:
+                        height: "1dp"
+
+                    MDLabel:
+                        text: "Body"
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.7, 1
+
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: "10dp"
+                    spacing: "40dp"
+                    size_hint: 1, 1
+
+                    MDLabel:
+                        text: "Camera"
+                        theme_text_color: "Primary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        pos_hint: {'center_x': .5}
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        height: "60dp"
+                        width: "900dp"
+                        size_hint: 0.9, 0.6
+                        pos_hint: {'center_x': .5}
+
+                    MDFillRoundFlatIconButton:
+                        id: btn_unlock
+                        text: "Unlock"
+                        icon: "language-python"
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+                        on_release: root.open_cash_drawer()
+
+                    MDFillRoundFlatIconButton:
+                        text: "Unlock"
+                        icon: "language-python"
+                        pos_hint: {'center_x': .5, 'center_y': .5}
+
+
+
+
+
+
+
+

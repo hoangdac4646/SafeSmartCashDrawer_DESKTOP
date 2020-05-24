@@ -1,0 +1,51 @@
+{
+  'Statistics': {
+      'kv_string': 'statistics',
+      'Import': 'from controller.statistics import Statistics',
+      'Factory': 'Statistics()',
+      'name_screen': 'statistics',
+      'source_code': 'Components-Tabs.md',
+      'object': 0,
+      'icon': 'dock-left'
+  },
+  'Open Cash Drawer': {
+      'kv_string': 'open_cash_drawer',
+      'Import': 'from controller.open_cash_drawer import OpenCashDrawer',
+      'Factory': 'OpenCashDrawer()',
+      'name_screen': 'open cash drawer',
+      'object': 0,
+      'icon': 'dock-left'
+  },
+    'Account Manager': {
+      'kv_string': 'account_manager',
+      'Import': 'from controller.account_manager import AccountManager',
+      'Factory': 'AccountManager()',
+      'name_screen': 'account manager',
+      'object': 0,
+      'icon': 'dock-left'
+  },
+  'Store Manager': {
+      'kv_string': 'navigation_drawer',
+      'Import': 'from controller.navigation_drawer import KitchenSinkNavigationDrawer',
+      'Factory': 'KitchenSinkNavigationDrawer()',
+      'name_screen': 'store_manager',
+      'object': 0,
+      'icon': 'dock-left'
+  },
+  'About': {
+      'kv_string': 'navigation_drawer',
+      'Import': 'from controller.navigation_drawer import KitchenSinkNavigationDrawer',
+      'Factory': 'KitchenSinkNavigationDrawer()',
+      'name_screen': 'about',
+      'object': 0,
+      'icon': 'dock-left'
+  },
+  'Logout': {
+      'kv_string': 'navigation_drawer',
+      'Import': 'from controller.navigation_drawer import KitchenSinkNavigationDrawer',
+      'Factory': 'KitchenSinkNavigationDrawer()',
+      'name_screen': 'logout',
+      'object': 0,
+      'icon': 'dock-left'
+  }
+}

@@ -1,0 +1,126 @@
+<AccountManager>
+    name: 'account manager'
+
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        Toolbar:
+            id: toolbar
+
+        MDBoxLayout:
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.4, 0.9
+
+                BoxLayout:
+                    orientation: "vertical"
+                    padding: "10dp"
+                    spacing: "40dp"
+                    size_hint: 1, 1
+
+                    Widget:
+                        size_hint: 1, 0.1
+
+                    MDLabel:
+                        text: "Avatar"
+                        theme_text_color: "Primary"
+                        size_hint_y: None
+                        height: self.texture_size[1]
+                        halign: 'center'
+
+                    MDCard:
+                        orientation: "vertical"
+                        padding: "8dp"
+                        height: "300dp"
+                        width: "300dp"
+                        size_hint: None, None
+                        pos_hint: {'center_x': .5}
+
+                    MDFillRoundFlatIconButton:
+                        text: "Upload Avatar"
+                        icon: "language-python"
+                        pos_hint: {'center_x': .5}
+
+                    Widget:
+                        size_hint: 1, 0.3
+
+            BoxLayout:
+                orientation: 'vertical'
+                size_hint: 0.6, 1
+                spacing: "20dp"
+
+                Widget:
+                    size_hint: 1, 0.2
+
+                MDLabel:
+                    text: "Profile"
+                    theme_text_color: "Primary"
+                    size_hint_y: None
+                    height: self.texture_size[1]
+                    halign: 'center'
+
+                MDCard:
+                    orientation: "vertical"
+                    padding: "20dp"
+                    size_hint: 0.8, 1
+                    pos_hint: {'center_x': .5}
+
+                    BoxLayout:
+                        orientation: "vertical"
+                        padding: "8dp"
+
+                        Widget:
+                        MDLabel:
+
+                        BoxLayout:
+                            size_hint: 1, None
+                            padding: "0dp"
+                            spacing: "20dp"
+
+                            MDTextField:
+                                hint_text: "Username"
+
+                            MDTextField:
+                                hint_text: "Họ tên"
+
+                        BoxLayout:
+                            size_hint: 1, None
+                            padding: "0dp"
+                            spacing: "20dp"
+
+                            MDTextField:
+                                hint_text: "Vai trò"
+
+                            MDTextField:
+                                hint_text: "Email"
+
+                            MDTextField:
+                                hint_text: "SĐT"
+
+                        BoxLayout:
+                            size_hint: 1, 0
+                            padding: "0dp"
+                            spacing: "20dp"
+
+                            MDTextField:
+                                hint_text: "Password"
+                            MDTextField:
+                                hint_text: "Confirm"
+
+                        Widget:
+
+                MDFillRoundFlatIconButton:
+                    text: "Submit"
+                    icon: "language-python"
+                    pos_hint: {'center_x': .5, 'center_y': .5}
+
+                Widget:
+                    size_hint: 1, 0.1
+
+
+
+
+
+
+
+

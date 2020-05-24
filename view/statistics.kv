@@ -1,0 +1,50 @@
+#:include view/tabs.kv
+
+<Statistics>
+    name: 'statistics'
+
+    MDBoxLayout:
+        orientation: 'vertical'
+
+        Toolbar:
+            id: toolbar
+
+        MDTabs:
+            id: android_tabs
+            tab_indicator_anim: False
+            background_color: app.theme_cls.primary_color
+
+            KitchenSinkTabItem:
+                id: tabitem_statistic
+                text: "Statistic"
+
+            KitchenSinkTabItem:
+                id: tabitem_unlocking
+                text: "Unlocking logs"
+
+                BoxLayout:
+                    orientation: "vertical"
+                    spacing: "10dp"
+
+                    ScrollView:
+                        do_scroll_x: False
+
+                        MDList:
+                            id: list_unlocking
+
+            KitchenSinkTabItem:
+                id: tabitem_notification
+                text: "Notification logs"
+
+
+                BoxLayout:
+                    orientation: "vertical"
+                    spacing: "10dp"
+
+                    ScrollView:
+                        do_scroll_x: False
+
+                        MDList:
+                            id: list_notification
+
+
